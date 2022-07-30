@@ -12,10 +12,16 @@ struct ContentView: View {
         VStack {
             MapView()
                 .frame(height: 300)
+                .ignoresSafeArea(edges: .top)
+            
             CircleImage()
+                .offset(y: -130)
+                .padding(.bottom, -130)
+            
             VStack(alignment: .leading) {
                 Text("Turtle Rock")
                     .font(.title)
+            
                 HStack {
                     Text("Joshua Tree National Park")
                         .font(.subheadline)
@@ -25,6 +31,9 @@ struct ContentView: View {
                 }
             }
             .padding()
+            Spacer()
+            
+            
         }
     }
 }
